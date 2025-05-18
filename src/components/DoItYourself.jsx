@@ -3,9 +3,26 @@ import carouseltwo from '../assets/images/carouseltwo.png'
 import carouselthree from '../assets/images/carouselthree.jpg'
 import carouselfour from '../assets/images/carouselfour.jpg'
 import { useState, useEffect } from 'react'
+import { motion } from 'motion/react'
 
 
 const DoItYourself = () => {
+    const diyVariant = {
+    initial : {
+    opacity: 0,
+    y: 100,
+     },
+
+    animate : {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      type: 'tween',
+      ease: 'easeIn'
+    }
+  }
+  }
     const [currentImage, setCurrentImage] = useState(0)
     const bgImages = [
         carouselone,
@@ -22,7 +39,7 @@ const DoItYourself = () => {
     },[currentImage])
 
   return (
-    <div className='my-10'>
+    <motion.div className='my-10' variants={diyVariant} initial="initial" whileInView="animate">
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>Want to do it yourself?</h2>
         <div style={{ backgroundImage:`url(${bgImages[currentImage]})` }} className='relative text-white bg-cover bg-center h-[50vh] w-9/12 mx-auto my-6 lg:h-[90vh]'>
         <div className='absolute inset-0 bg-black opacity-30'></div>
@@ -32,7 +49,7 @@ const DoItYourself = () => {
         </div>
         </div>
       
-    </div>
+    </motion.div>
   )
 }
 

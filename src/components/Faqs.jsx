@@ -1,7 +1,44 @@
 import { ChevronDown } from 'lucide-react'
 import { useState} from 'react'
+import { motion } from 'motion/react'
 
 const Faqs = () => {
+    const faqVariant = {
+    initial : {
+    opacity: 0,
+    y: 100,
+  },
+
+  animate : {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      type: 'tween',
+      ease: 'easeIn',
+      delay: 0.2,
+      staggerChildren: 0.2,
+    }
+  }
+  }
+
+  const listVariant = {
+    initial : {
+    opacity: 0,
+    y: 100,
+  },
+
+  animate : {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'tween',
+      ease: 'easeIn',
+    }
+  }
+  }
+
+
   const faqData = [
     {question: "Where is Luxe Wash Laundry located?", answer: "We’re inside Muri Akinola Street, Victoria Island, Shops 33 & 58 44 Prime Shopping Mall Off Ajose Adeogun & Beside Mobil Filling Station Lekki-Epe Expressway, Victoria Island, Lagos. Just walk in or drive in and ask for Luxe Wash Laundry—you can’t miss us!" },
     {question: "What kind of clothes do you wash?", answer: " We wash all kinds of clothes—like shirts, suits, dresses, native wear, school uniforms, and even bedsheets." },
@@ -22,13 +59,13 @@ const Faqs = () => {
     setOpenIndex((prev) => (prev === index ? null : index));
     }
   return (
-    <div id="faqs" className="text-lg py-3 w-11/12 md:w-3/4 mx-auto" onClick={handleClick}>
+    <motion.div id="faqs" className="text-lg py-3 w-11/12 md:w-3/4 mx-auto" variants={faqVariant} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}} onClick={handleClick}>
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>Frequently Asked Questions</h2>
         <div>
         {faqData.map((item, index)=>{
           const isOpen = openIndex === index.toString();
           return (
-            <div className='border-2 rounded-lg my-2 bg-gray-200 border-gray-300 p-3' key={index} data-index={index}>
+            <motion.div variants={listVariant} className='border-2 rounded-lg my-2 bg-gray-200 border-gray-300 p-3' key={index} data-index={index}>
                <div className='w-full flex items-center'>
                  <p className='flex-grow text-blue-950 font-semibold'>{item.question}</p>
                  <div>
@@ -36,7 +73,7 @@ const Faqs = () => {
                  </div>
                </div>
                <p className='text-base text-gray-700'>{isOpen&&item.answer}</p>
-           </div>  
+           </motion.div>  
           )
           })}
         </div>
@@ -45,7 +82,7 @@ const Faqs = () => {
           <button className="text-white p-2 rounded-md mx-auto hover:from-[rgb(255,0,204)] hover:bg-white hover:text-accent " >Contact Us
           </button>
         </div>
-    </div>
+    </motion.div>
   )
 }
 export default Faqs
