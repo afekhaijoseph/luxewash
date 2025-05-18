@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
+@layer utilities {
+  .grid-layout {
+    display: grid;
+    grid-template-areas:
+      "aboutone aboutthree"
+      "aboutone aboutthree"
+      "aboutone aboutthree"
+      "aboutone abouttwo";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .area-aboutone {
+    grid-area: aboutone;
+  }
+
+  .area-abouttwo {
+    grid-area: abouttwo;
+  }
+  .area-aboutthree {
+    grid-area: aboutthree;
+  }
+}
