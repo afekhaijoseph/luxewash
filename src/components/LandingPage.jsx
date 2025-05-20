@@ -4,8 +4,8 @@ import Hero from './Hero'
 
 const LandingPage = () => {
   return (
-    <div className='h-screen bg-cover bg-no-repeat bg-center lg:bg-top text-gray-300 relative' style={{ backgroundImage: `url(${landingpage})`}}>
-        <div className='h-screen bg-black opacity-50'></div>
+    <div className='h-[90vh] bg-cover bg-no-repeat bg-center lg:bg-top text-gray-300 relative' style={{ backgroundImage: `url(${landingpage})`}}>
+        <div className='h-[90vh] bg-black opacity-50'></div>
         <div>
             <NavBar/>
             <Hero/>
