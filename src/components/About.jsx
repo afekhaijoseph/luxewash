@@ -29,7 +29,7 @@ const About = () => {
         <img className="w-full h-full object-cover rounded-lg" src={aboutone} alt="" />
       </div>
       <div className="area-abouttwo flex items-center justify-center border rounded-lg bg-[#27333a] text-white p-2">
-        <p className="text-2xl font-semibold rounded-lg ">Luxury</p>
+        <p className="text-2xl rounded-lg ">Luxury</p>
       </div>
       <div className="area-aboutthree h-full w-full rounded-lg">
         <img className="w-full h-full object-cover rounded-lg" src={aboutthree} alt="" />

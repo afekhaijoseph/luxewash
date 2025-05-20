@@ -67,7 +67,7 @@ const Faqs = () => {
           return (
             <motion.div variants={listVariant} className='border-2 rounded-lg my-2 border-gray-300 p-3' key={index} data-index={index}>
                <div className='w-full flex items-center'>
-                 <p className='flex-grow text-gray-600 font-semibold'>{item.question}</p>
+                 <p className='flex-grow text-gray-600'>{item.question}</p>
                  <div>
                    <ChevronDown className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} size={24} color={'#1e1b4b'}/> 
                  </div>
