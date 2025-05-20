@@ -1,5 +1,7 @@
 import {useEffect, useState} from 'react'
 import {motion} from 'motion/react'
+import logo from '../assets/logo.svg'
+import { div } from 'motion/react-client';
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,35 +29,56 @@ const NavBar = () => {
     return ()=>  window.removeEventListener('scroll', onScroll)
   }, []);
   return (
-  <motion.div variants={navVariant} initial="initial" animate="animate" className={`w-full text-gray-300 items-center py-4 px-5 border-b border-stone-400 fixed top-0 font-lato z-50 ${isScrolled && "bg-primary"}`}>
-        <div className='flex justify-between lg:w-10/12 mx-auto'>
+  <motion.div variants={navVariant} initial="initial" animate="animate" className={`w-full text-gray-300 items-center p-2 px-5 border-b border-stone-400 fixed top-0 font-lato z-50 ${isScrolled && "bg-primary"}`}>
+    {/* mobile navigation */}
+    {isOpen && 
+    <div className='fixed w-3/4 h-screen bg-secondary top-0 left-0 p-2'>
+      <div className='lg:flex-1 flex flex-row lg:text-center items-center'>
+            <div className='w-10'>
+              <img className='w-full' src={logo} alt="company logo"/>
+            </div>
+            <a href="/" className='p-0 m-0'>LuxeWash</a>
+         </div>
+         <div className='flex flex-col mt-4 items-center'>
+          <a href="#about" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">About Us</a>
+          <a href="#services" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">Services</a>
+          <a href="#howitworks" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">How It Works</a>
+          <a href="#faqs" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit ">FAQs</a>
+         </div>
+      
+    </div>
+    }
+        <div className='flex justify-between items-center md:items-end lg:w-10/12 mx-auto'>
           <div className="gap-10 hidden md:flex">
             <a href="#about" className="hover:text-gray-400">About Us</a>
             <a href="#services" className="hover:text-gray-400">Services</a>
          </div>
-         <div className='lg:flex-1 lg:text-center'>
-            <a href="/">LuxeWash</a>
+      <div className='lg:flex-1 flex flex-row lg:flex-col lg:text-center items-center'>
+            <div className='w-10'>
+              <img className='w-full' src={logo} alt="company logo"/>
+            </div>
+            <a href="/" className='p-0 m-0'>LuxeWash</a>
          </div>
          <div className="gap-10 hidden md:flex">
             <a href="#howitworks" className="hover:text-gray-400">How It Works</a>
-            <a href="#faq" className="hover:text-gray-400">FAQs</a>
+            <a href="#faqs" className="hover:text-gray-400">FAQs</a>
          </div> 
         <div>
 
         <div onClick={() => setIsOpen(!isOpen)} className="hamburger w-12 md:hidden cursor-pointer">
           <div className="w-full flex flex-col gap-1 transition-all duration-300">
             <span
-              className={`block h-1 bg-white rounded-md transition-transform duration-300 ${
+              className={`block h-1 bg-gray-300 rounded-md transition-transform duration-300 ${
                 isOpen ? "rotate-45 translate-y-2" : ""
               }`}
             />
             <span
-              className={`block h-1 bg-white rounded-md transition-opacity duration-300 ${
+              className={`block h-1 bg-gray-300 rounded-md transition-opacity duration-300 ${
                 isOpen ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`block h-1 bg-white rounded-md transition-transform duration-300 ${
+              className={`block h-1 bg-gray-300 rounded-md transition-transform duration-300 ${
                 isOpen ? "-rotate-45 -translate-y-2" : ""
               }`}
             />
