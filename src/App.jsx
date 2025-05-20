@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 import DoItYourself from './components/DoItYourself'
 function App() {
   return (
-    <div className='font-lato'>
+    <div className='font-lato text-gray-700'>
     <LandingPage/>
     <About/>
     <OurServices/>

@@ -1,7 +1,7 @@
 
 const Form = () => {
   return (
-        <form action="" className="w-full md:w-8/12 mx-auto bg-[#3f5a36] text-white py-8 px-2 md:p-8 my-8 rounded-md ">
+        <form action="" className="w-full md:w-8/12 mx-auto bg-secondary text-white py-8 px-2 md:p-8 my-8 rounded-md ">
             <div className="w-10/12 mx-auto flex flex-col gap-4">
             <div className="flex gap-2 flex-col md:flex-row">
                 <label htmlFor="">Name:</label>

@@ -13,7 +13,7 @@ const About = () => {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       type: 'tween',
       ease: 'easeIn'
     }
@@ -21,7 +21,7 @@ const About = () => {
   }
 
   return (
-    <motion.div className='my-14 w-10/12 lg:w-3/5 mx-auto' variants={aboutVariant} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.2}}>
+    <motion.div id="about" className='my-14 w-10/12 lg:w-3/5 mx-auto' variants={aboutVariant} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.2}}>
       <h2 className='my-4 text-center text-4xl font-bold font-playfair'>About Us</h2>
       <div className="flex gap-6 my-6 flex-col md:flex-row h-[600px] md:h-[40vh] lg:h-[60vh] items-center">
       <div className="flex-1 grid-layout basis-full gap-3 md:h-full max-h-80"> {/* Set a fixed or relative height */}

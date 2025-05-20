@@ -20,7 +20,7 @@ const Hero = () => {
 
   }
 
-    const heroButtonVariant = {
+    const ariseVariant = {
     initial:{
       opacity: 0,
       y: 50,
@@ -31,18 +31,23 @@ const Hero = () => {
       y: 0},
 
   }
+
+
   const sentence = "Premium Laundry. Delivered to Your Doorstep.";
   const letters = sentence.split("");
   return (
     <>
-      <motion.div className='absolute top-20 md:top-1/3 left-1/2 -translate-x-1/2 w-11/12 lg:w-8/12 mx-auto flex flex-col gap-10 text-gray-300'>
+      <motion.div className='absolute bottom-1/4 md:top-1/3 left-1/2 -translate-x-1/2 w-11/12 lg:w-8/12 mx-auto flex flex-col gap-10 text-gray-300'>
             <h1 className='text-6xl font-playfair text-center'>{letters.map((letter, index) => (
               <motion.span className='' variants={heroVariant} initial="initial" animate="animate" transition={{ delay: index * 0.05, duration: 0.5 }} key={index}>{letter}</motion.span>
             ))}</h1>
-            <motion.button className='border border-gray-300 w-fit self-center p-3 rounded-md hover:bg-[#002147] hover:border-[#002147] hover:text-white' variants={heroButtonVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 1) * 0.05, duration: 0.5 }}>Schedule a Pick up</motion.button>
+            <motion.button className='border border-gray-300 w-fit self-center p-3 rounded-md hover:bg-[#002147] hover:border-[#002147] hover:text-white' variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 1) * 0.05, duration: 0.5 }}>Schedule a Pick up</motion.button>
+            <div className='w-28 aspect-square mx-auto lg:hidden'>
+              <img className='w-full h-full rounded-lg' src={qrcode} alt="whatsapp qrcode" />
+            </div>
       </motion.div>
         
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex justify-between font-playfair font-thin text-md w-full lg:w-9/12 mx-auto px-3">
+      <motion.div variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 10) * 0.05, duration: 0.3 }} className="absolute bottom-5 left-0 right-0 hidden md:flex justify-between font-playfair font-thin text-base w-full lg:w-9/12 mx-auto px-3">
           <div className='flex items-center gap-2'>
             <div className='max-w-7'>
                 <img src={timing} alt="" />
@@ -57,7 +62,7 @@ const Hero = () => {
             <p>Doorstep service</p>
           </div>
             
-            <div className='h-6 bg-gray-300 w-[2px]'></div>
+            <div className='h-6 bg-gray-300 w-[2px] hidden md:block'></div>
 
             <div className='flex items-center gap-2'>
             <div className='max-w-7'>
@@ -72,10 +77,10 @@ const Hero = () => {
             </div>
             <p>Premium Finishing</p>
           </div>
-          </div>
-          <div className='w-1/2 lg:w-24 aspect-square mx-auto md:absolute bottom-14 right-6'>
-            <img className='w-full h-full rounded-md' src={qrcode} alt="" />
-          </div>
+      </motion.div>
+      <div className='w-28 aspect-square mx-auto absolute hidden lg:block bottom-6 right-6'>
+        <img className='w-full h-full rounded-lg' src={qrcode} alt="whatsapp qrcode" />
+      </div>
     </>
   )
 }

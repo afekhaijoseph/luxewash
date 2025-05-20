@@ -7,6 +7,10 @@ export default {
         lato: ["Lato", "sans-serif"],
         playfair: ["Playfair", "serif"],
       },
+      colors: {
+        primary: "#9c8165",
+        secondary: "#36454F",
+      },
     },
   },
   plugins: [],

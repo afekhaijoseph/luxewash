@@ -16,7 +16,7 @@ const bipVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.3,
+      duration: 0.5,
       type: 'tween',
       ease: 'easeIn'
     }
@@ -24,13 +24,13 @@ const bipVariant = {
   }
   return (
     <div className="bg-gray-200 py-14">
-      <motion.div variants={bipVariant} initial="initial" whileInView="animate">
+      <motion.div variants={bipVariant} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}}>
         <div className="text-center px-3">
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>Book a Pickup</h2>
         <p>We make it easy to schedule a pickup for your items</p>
       </div>
-      <div className="flex flex-col items-center my-6 bg-white w-full md:w-10/12 mx-auto shadow-xl">
-        <h3 className="text-3xl font-semibold my-3 text-center">Quickest way to book:</h3>
+      <div className="flex flex-col items-center my-6 bg-white w-full md:w-10/12 mx-auto shadow-xl rounded-md">
+        <h3 className="text-2xl font-semibold my-3 text-center">Quickest way to book:</h3>
         <div className="w-10/12 mx-auto">
           <div className="flex gap-2 my-3 bg-gray-100 p-1.5 font-semibold">
           <button onClick={()=>setView('first')} className={`basis-full border border-white p-1 ${view === 'first' && 'bg-gray-300'}`}>Chat with us on Whatsapp</button>
