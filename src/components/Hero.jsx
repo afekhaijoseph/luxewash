@@ -3,10 +3,14 @@ import delivery from '../assets/home-delivery.png'
 import gentle from '../assets/gentle.png'
 import premium from '../assets/premium.png'
 import qrcode from '../assets/qrcode.png'
+import { FaWhatsapp } from "react-icons/fa";
 import {motion} from 'motion/react'
 
 
 const Hero = () => {
+  const sentence = "Premium Laundry. Delivered to Your Doorstep.";
+  const letters = sentence.split("");
+
   const heroVariant = {
     initial:{
       filter: "blur(10px)",
@@ -20,7 +24,7 @@ const Hero = () => {
 
   }
 
-    const ariseVariant = {
+  const ariseVariant = {
     initial:{
       opacity: 0,
       y: 50,
@@ -29,22 +33,43 @@ const Hero = () => {
     animate:{
       opacity: 1,
       y: 0},
-
   }
 
+  const whatsappVariant = {
+    initial:{
+      opacity: 0,
+      scale: 1,
+    },
 
-  const sentence = "Premium Laundry. Delivered to Your Doorstep.";
-  const letters = sentence.split("");
+    animate:{
+      opacity: 1,
+      scale: [1, 1.2, 1],
+      transition:{
+        opacity: {
+          delay: (letters.length + 10) * 0.05,
+          duration: 0.8,
+        },
+        scale: {
+          delay: (letters.length + 10) * 0.05,
+      duration: 0.8,
+      repeat: 5,
+      repeatType: "loop",
+      ease: "easeInOut"
+        }
+      }
+    }
+}
+
   return (
     <>
-      <motion.div className='absolute bottom-1/4 md:top-1/3 left-1/2 -translate-x-1/2 w-11/12 lg:w-8/12 mx-auto flex flex-col gap-10 text-gray-300'>
-            <h1 className='text-6xl font-playfair text-center'>{letters.map((letter, index) => (
+      <motion.div className='absolute top-[40%] md:top-1/3 left-1/2 -translate-x-1/2 w-11/12 lg:w-8/12 mx-auto flex flex-col gap-10 text-gray-300'>
+            <h1 className='text-5xl font-playfair text-center '>{letters.map((letter, index) => (
               <motion.span className='' variants={heroVariant} initial="initial" animate="animate" transition={{ delay: index * 0.05, duration: 0.5 }} key={index}>{letter}</motion.span>
             ))}</h1>
             <motion.button className='border border-gray-300 w-fit self-center p-3 rounded-md hover:bg-[#002147] hover:border-[#002147] hover:text-white' variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 1) * 0.05, duration: 0.5 }}>Schedule a Pick up</motion.button>
-            <div className='w-28 aspect-square mx-auto lg:hidden'>
+            {/* <div className='w-28 aspect-square mx-auto lg:hidden'>
               <img className='w-full h-full rounded-lg' src={qrcode} alt="whatsapp qrcode" />
-            </div>
+            </div> */}
       </motion.div>
         
       <motion.div variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 10) * 0.05, duration: 0.3 }} className="absolute bottom-5 left-0 right-0 hidden md:flex justify-between font-playfair font-thin text-base w-full lg:w-9/12 mx-auto px-3">
@@ -78,8 +103,15 @@ const Hero = () => {
             <p>Premium Finishing</p>
           </div>
       </motion.div>
+      
       <div className='w-28 aspect-square mx-auto absolute hidden lg:block bottom-6 right-6'>
         <img className='w-full h-full rounded-lg' src={qrcode} alt="whatsapp qrcode" />
+      </div>
+      <div>
+        <motion.div variants={whatsappVariant} initial="initial" animate="animate" className='absolute bottom-3 right-3 flex flex-col md:hidden items-center'>
+          <button><FaWhatsapp className='h-11 w-11'/></button>
+          <p className='text-sm'>click to scan</p>
+        </motion.div>
       </div>
     </>
   )

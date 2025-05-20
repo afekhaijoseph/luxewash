@@ -52,7 +52,7 @@ const boxVariants = {
               <p>02</p>
             </div>
             <div className='w-14'>
-              <img src={pickup} alt="" />
+              <img src={delivery} alt="" />
           </div>
             <p>We Pick up</p>
           </motion.div>
@@ -72,7 +72,7 @@ const boxVariants = {
               <p>04</p>
             </div>
             <div className='max-w-14'>
-              <img src={delivery} alt="" />
+              <img src={pickup} alt="" />
           </div>
             <p>We deliver</p>
           </motion.div>
