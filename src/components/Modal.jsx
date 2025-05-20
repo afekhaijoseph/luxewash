@@ -31,7 +31,7 @@ const Modal = ({ showModal, closeModal, children }) => {
         variants={modal}
         onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
       >
-        <button className="text-gray-500 float-right" onClick={closeModal}>
+        <button className="text-gray-300 float-right" onClick={closeModal}>
           ✕
         </button>
         {children}
