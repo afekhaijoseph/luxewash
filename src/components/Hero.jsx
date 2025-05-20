@@ -117,7 +117,7 @@ const Hero = () => {
         <img className='w-full h-full rounded-lg' src={qrcode} alt="whatsapp qrcode" />
       </div>
       <div>
-        <motion.div variants={whatsappVariant} initial="initial" animate="animate" className='absolute bottom-24 right-6 flex flex-col md:hidden items-center'>
+        <motion.div variants={whatsappVariant} initial="initial" animate="animate" className='absolute bottom-24 right-6 flex flex-col lg:hidden items-center'>
           <button onClick={() => setModalOpen(true)}><FaWhatsapp className='h-11 w-11'/></button>
           <p className='text-sm'>click to scan</p>
         </motion.div>

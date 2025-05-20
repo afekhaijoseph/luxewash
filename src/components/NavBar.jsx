@@ -47,8 +47,8 @@ const NavBar = () => {
       
     </div>
     }
-        <div className='flex justify-between items-center md:items-end lg:w-10/12 mx-auto'>
-          <div className="gap-10 hidden md:flex">
+        <div className='flex justify-between items-center lg:items-end lg:w-10/12 mx-auto'>
+          <div className="gap-10 hidden lg:flex">
             <a href="#about" className="hover:text-gray-400">About Us</a>
             <a href="#services" className="hover:text-gray-400">Services</a>
          </div>
@@ -58,13 +58,13 @@ const NavBar = () => {
             </div>
             <a href="/" className=''>LuxeWash</a>
          </div>
-         <div className="gap-10 hidden md:flex">
+         <div className="gap-10 hidden lg:flex">
             <a href="#howitworks" className="hover:text-gray-400">How It Works</a>
             <a href="#faqs" className="hover:text-gray-400">FAQs</a>
          </div> 
         <div>
 
-        <div onClick={() => setIsOpen(!isOpen)} className="hamburger w-12 md:hidden cursor-pointer">
+        <div onClick={() => setIsOpen(!isOpen)} className="hamburger w-12 lg:hidden cursor-pointer">
           <div className="w-full flex flex-col gap-1 transition-all duration-300">
             <span
               className={`block h-1 bg-gray-300 rounded-md transition-transform duration-300 ${
