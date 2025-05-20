@@ -62,7 +62,7 @@ const Hero = () => {
 
   return (
     <>
-      <motion.div className='absolute top-[40%] md:top-1/3 left-1/2 -translate-x-1/2 w-11/12 lg:w-8/12 mx-auto flex flex-col gap-10 text-gray-300'>
+      <motion.div className='absolute top-[20%] md:top-1/3 left-1/2 -translate-x-1/2 w-11/12 lg:w-8/12 mx-auto flex flex-col gap-10 text-gray-300'>
             <h1 className='text-5xl font-playfair text-center '>{letters.map((letter, index) => (
               <motion.span className='' variants={heroVariant} initial="initial" animate="animate" transition={{ delay: index * 0.05, duration: 0.5 }} key={index}>{letter}</motion.span>
             ))}</h1>
