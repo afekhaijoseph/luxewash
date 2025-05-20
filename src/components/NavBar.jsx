@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react'
 import {motion} from 'motion/react'
 import logo from '../assets/logo.svg'
-import { div } from 'motion/react-client';
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,12 +28,12 @@ const NavBar = () => {
     return ()=>  window.removeEventListener('scroll', onScroll)
   }, []);
   return (
-  <motion.div variants={navVariant} initial="initial" animate="animate" className={`w-full text-gray-300 items-center p-2 px-5 border-b border-stone-400 fixed top-0 font-lato z-50 ${isScrolled && "bg-primary"}`}>
+  <motion.div variants={navVariant} initial="initial" animate="animate" className={`w-full text-gray-300 items-center p-2 lg:px-5 border-b border-stone-400 fixed top-0 font-lato z-50 ${isScrolled && "bg-primary"}`}>
     {/* mobile navigation */}
     {isOpen && 
     <div className='fixed w-3/4 h-screen bg-secondary top-0 left-0 p-2'>
       <div className='lg:flex-1 flex flex-row lg:text-center items-center'>
-            <div className='w-10'>
+            <div className='w-7 p-1'>
               <img className='w-full' src={logo} alt="company logo"/>
             </div>
             <a href="/" className='p-0 m-0'>LuxeWash</a>
@@ -53,11 +52,11 @@ const NavBar = () => {
             <a href="#about" className="hover:text-gray-400">About Us</a>
             <a href="#services" className="hover:text-gray-400">Services</a>
          </div>
-      <div className='lg:flex-1 flex flex-row lg:flex-col lg:text-center items-center'>
-            <div className='w-10'>
-              <img className='w-full' src={logo} alt="company logo"/>
+      <div className='lg:flex-1 flex flex-row md:flex-col lg:text-center items-center'>
+            <div className='w-7 px-1'>
+              <img className='' src={logo} alt="company logo"/>
             </div>
-            <a href="/" className='p-0 m-0'>LuxeWash</a>
+            <a href="/" className=''>LuxeWash</a>
          </div>
          <div className="gap-10 hidden md:flex">
             <a href="#howitworks" className="hover:text-gray-400">How It Works</a>
