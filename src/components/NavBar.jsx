@@ -49,8 +49,8 @@ const NavBar = () => {
     }
         <div className='flex justify-between items-center lg:items-end lg:w-10/12 mx-auto'>
           <div className="gap-10 hidden lg:flex">
-            <a href="#about" className="hover:text-gray-400">About Us</a>
-            <a href="#services" className="hover:text-gray-400">Services</a>
+            <a href="#about" className="hover:text-secondary">About Us</a>
+            <a href="#services" className="hover:text-secondary">Services</a>
          </div>
       <div className='lg:flex-1 flex flex-row md:flex-col lg:text-center items-center'>
             <div className='w-7 px-1'>
@@ -59,8 +59,8 @@ const NavBar = () => {
             <a href="/" className=''>LuxeWash</a>
          </div>
          <div className="gap-10 hidden lg:flex">
-            <a href="#howitworks" className="hover:text-gray-400">How It Works</a>
-            <a href="#faqs" className="hover:text-gray-400">FAQs</a>
+            <a href="#howitworks" className="hover:text-[rgb(106,157,186)]">How It Works</a>
+            <a href="#faqs" className="hover:text-secondary">FAQs</a>
          </div> 
         <div>
 

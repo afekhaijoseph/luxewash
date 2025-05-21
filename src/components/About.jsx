@@ -26,7 +26,7 @@ const About = () => {
       <div className="flex gap-6 my-6 flex-col md:flex-row h-[600px] md:h-[40vh] lg:h-[60vh] items-center">
       <div className="flex-1 grid-layout basis-full gap-3 md:h-full max-h-80"> {/* Set a fixed or relative height */}
       <div className="area-aboutone rounded-lg">
-        <img className="w-full h-full object-cover rounded-lg" src={aboutone} alt="" />
+        <img className="w-full h-full object-cover rounded-lg" src={aboutone} alt="Laundry attendant" />
       </div>
       <div className="area-abouttwo flex items-center justify-center border rounded-lg bg-[#27333a] text-white p-2">
         <p className="text-2xl rounded-lg ">Luxury</p>
