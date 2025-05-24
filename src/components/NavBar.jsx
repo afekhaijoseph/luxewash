@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {motion} from 'motion/react'
+import {motion, AnimatePresence} from 'motion/react'
 import logo from '../assets/logo.svg'
 
 const NavBar = () => {
@@ -18,7 +18,22 @@ const NavBar = () => {
         duration: 1,
       }
      }
+  }
 
+  const mobileNavVariant = {
+     initial: { opacity: 0, x: -100 },
+     animate: { 
+      opacity: 1,
+       x: 0,
+      transition: {
+      duration: 0.3,
+     } },
+     exit: {
+      opacity: 0,
+      x: -100,
+      transition: {
+      duration: 0.3,
+     } },
   }
   useEffect(()=>{
     const onScroll =()=>{
@@ -29,9 +44,10 @@ const NavBar = () => {
   }, []);
   return (
   <motion.div variants={navVariant} initial="initial" animate="animate" className={`w-full text-gray-300 items-center p-2 lg:px-5 border-b border-stone-400 fixed top-0 font-lato z-50 ${isScrolled && "bg-primary"}`}>
+    <AnimatePresence>
     {/* mobile navigation */}
     {isOpen && 
-    <div className='fixed w-3/4 h-screen bg-secondary top-0 left-0 p-2'>
+    <motion.div className='fixed w-3/4 h-screen bg-secondary top-0 left-0 p-2' variants={mobileNavVariant} initial="initial" animate="animate" exit="exit">
       <div className='lg:flex-1 flex flex-row lg:text-center items-center'>
             <div className='w-7 p-1'>
               <img className='w-full' src={logo} alt="company logo"/>
@@ -44,9 +60,9 @@ const NavBar = () => {
           <a href="#howitworks" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">How It Works</a>
           <a href="#faqs" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit ">FAQs</a>
          </div>
-      
-    </div>
+    </motion.div>
     }
+     </AnimatePresence>
         <div className='flex justify-between items-center lg:items-end lg:w-10/12 mx-auto'>
           <div className="gap-10 hidden lg:flex">
             <a href="#about" className="hover:text-secondary">About Us</a>
@@ -59,7 +75,7 @@ const NavBar = () => {
             <a href="/" className=''>LuxeWash</a>
          </div>
          <div className="gap-10 hidden lg:flex">
-            <a href="#howitworks" className="hover:text-[rgb(106,157,186)]">How It Works</a>
+            <a href="#howitworks" className="hover:text-secondary">How It Works</a>
             <a href="#faqs" className="hover:text-secondary">FAQs</a>
          </div> 
         <div>
