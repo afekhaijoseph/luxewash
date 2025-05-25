@@ -113,7 +113,7 @@ const Hero = () => {
           </div>
       </motion.div>
       
-      <div className='w-28 aspect-square mx-auto absolute hidden lg:block bottom-6 right-6'>
+      <div className='w-32 aspect-square mx-auto absolute hidden lg:block bottom-6 right-6'>
         <img className='w-full h-full rounded-lg' src={qrcode} alt="whatsapp qrcode" />
       </div>
       <div>
