@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react'
 import {motion, AnimatePresence} from 'motion/react'
 import logo from '../assets/logo.svg'
+import { Link } from 'react-scroll'
+import { LiaNodeJs } from 'react-icons/lia'
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,28 +57,28 @@ const NavBar = () => {
             <a href="/" className='p-0 m-0'>LuxeWash</a>
          </div>
          <div className='flex flex-col mt-4 items-center'>
-          <a href="#about" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">About Us</a>
-          <a href="#services" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">Services</a>
-          <a href="#howitworks" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">How It Works</a>
-          <a href="#faqs" className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit ">FAQs</a>
+          <Link to="about" smooth={true} duration={500} offset={-70} className="cursor-pointer">About Us</Link>
+          <Link to="services" smooth={true} duration={500} offset={-50}  className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">Services</Link>
+          <Link to="howitworks" smooth={true} duration={500} offset={-50}  className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit">How It Works</Link>
+          <Link to="faqs" smooth={true} duration={500} offset={-50}  className="hover:text-gray-400 p-3 text-center border-b border-gray-300 w-fit ">FAQs</Link>
          </div>
     </motion.div>
     }
      </AnimatePresence>
         <div className='flex justify-between items-center lg:items-end lg:w-10/12 mx-auto'>
           <div className="gap-10 hidden lg:flex">
-            <a href="#about" className="hover:text-secondary">About Us</a>
-            <a href="#services" className="hover:text-secondary">Services</a>
+            <Link  to="about" smooth={true} duration={800} offset={-70} className="hover:text-secondary">About Us</Link>
+            <Link  to="services" smooth={true} duration={800} offset={-70} className="hover:text-secondary">Services</Link>
          </div>
       <div className='lg:flex-1 flex flex-row md:flex-col lg:text-center items-center'>
             <div className='w-7 px-1'>
               <img className='' src={logo} alt="company logo"/>
             </div>
-            <a href="/" className=''>LuxeWash</a>
+            <Link href="/" className=''>LuxeWash</Link>
          </div>
          <div className="gap-10 hidden lg:flex">
-            <a href="#howitworks" className="hover:text-secondary">How It Works</a>
-            <a href="#faqs" className="hover:text-secondary">FAQs</a>
+            <Link to="howitworks" smooth={true} duration={800} offset={-70} className="hover:text-secondary">How It Works</Link>
+            <Link  to="faqs" smooth={true} duration={800} offset={-70}  className="hover:text-secondary">FAQs</Link>
          </div> 
         <div>
 

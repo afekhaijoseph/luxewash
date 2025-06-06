@@ -1,4 +1,5 @@
 import logo from '../assets/logo.svg'
+import { Link } from 'react-scroll'
 const Footer = () => {
   return (
     <div className="bg-secondary text-gray-300 py-3">
@@ -10,10 +11,10 @@ const Footer = () => {
             <a href="/" className='p-0 m-0'>LuxeWash</a>
         </div>
       <div className="flex gap-3">
-        <p className="hover:text-primary">About Us</p>
-        <p className="hover:text-primary">Services</p>
-        <p className="hover:text-primary">How it works</p>
-        <p className="hover:text-primary">Faqs</p>
+        <Link to="services" smooth={true} duration={500} offset={-50} href="#about" className="hover:text-primary">About Us</Link>
+        <Link to="services" smooth={true} duration={500} offset={-50} href="#services" className="hover:text-primary">Services</Link>
+        <Link to="services" smooth={true} duration={500} offset={-50} href="#howitworks" className="hover:text-primary">How it works</Link>
+        <Link to="services" smooth={true} duration={500} offset={-50} href="#faqs" className="hover:text-primary">Faqs</Link>
       </div>
       </div>
       <div className="w-full">
