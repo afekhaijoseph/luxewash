@@ -78,7 +78,7 @@ const boxVariants = {
           </motion.div>
         </div>
         <div className='mt-8 md:mt-0'>
-          <motion.a variants={boxVariants} href="https://wa.me/234XXXXXXXXXX" target="_blank" className="bg-green-500 text-white px-4 py-2 rounded inline-block">Chat on WhatsApp</motion.a>
+          <motion.a variants={boxVariants} href='https://wa.me/2349161497203' target='_blank' className="bg-green-500 text-white px-4 py-2 rounded inline-block">Chat on WhatsApp</motion.a>
         </div>
         
      </motion.div>

@@ -32,9 +32,9 @@ const bipVariant = {
       <div className="flex flex-col items-center my-6 bg-white w-full md:w-10/12 mx-auto shadow-xl rounded-md">
         <h3 className="text-2xl my-3 text-center">Quickest way to book:</h3>
         <div className="w-10/12 mx-auto">
-          <div className="flex gap-2 my-3 bg-gray-100 p-1.5">
-          <button onClick={()=>setView('first')} className={`basis-full border border-white p-1 ${view === 'first' && 'bg-gray-300'}`}>Chat with us on Whatsapp</button>
-          <button onClick={()=>setView('second')} className={`basis-full border border-white p-1 ${view === 'second' && 'bg-gray-300'}`}>Complete the form</button>
+          <div className="flex gap-2 my-3 bg-gray-100 p-1.5 rounded-md">
+          <button onClick={()=>setView('first')} className={`basis-full border border-white p-1 rounded-md ${view === 'first' && 'bg-gray-300'}`}>Chat with us on Whatsapp</button>
+          <button onClick={()=>setView('second')} className={`basis-full border border-white p-1 rounded-md ${view === 'second' && 'bg-gray-300'}`}>Complete the form</button>
         </div>
         <div>
           {view === 'first' && <Whatsapp/>}

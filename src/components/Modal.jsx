@@ -19,7 +19,7 @@ const Modal = ({ showModal, closeModal, children }) => {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[100]"
       variants={backdrop}
       initial="hidden"
       animate="visible"

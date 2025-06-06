@@ -69,7 +69,7 @@ const OurServices = () => {
          </div>
          </div>
          <div className='w-full flex items-center'>
-            <button className='mx-auto border-2 p-2 rounded-md hover:bg-white hover:text-[#36454F] hover:border-[#36454F]'>Get a Quote</button>      
+            <a href='https://wa.me/2349161497203' target='_blank' className='mx-auto border-2 p-2 rounded-md hover:bg-white hover:text-[#36454F] hover:border-[#36454F]'>Get a Quote</a>      
          </div>
     </motion.div> 
     </div>

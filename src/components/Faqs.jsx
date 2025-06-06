@@ -72,7 +72,7 @@ const Faqs = () => {
                    <ChevronDown className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} size={24} color={'#1e1b4b'}/> 
                  </div>
                </div>
-               <p className='text-base text-gray-700'>{isOpen&&item.answer}</p>
+               <p className='text-sm pt-2 text-gray-700'>{isOpen&&item.answer}</p>
            </motion.div>  
           )
           })}

@@ -70,7 +70,7 @@ const Hero = () => {
         <h2 className="text-xl font-semibold mb-4">WhatsApp QR Code</h2>
         <p>Scan to start a chat with us!</p>
         <div className='w-10/12 mx-auto'>
-          <img className= "rounded-xl" src={qrcode} alt="whatsapp qrcode" />
+          <img className= "rounded-xl w-full" src={qrcode} alt="whatsapp qrcode" />
         </div>
       </Modal>
     </div> }
