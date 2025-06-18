@@ -1,24 +1,17 @@
-import LandingPage from './components/LandingPage'
-import About from './components/About'
-import OurServices from './components/OurServices'
-import HowItWorks from './components/HowItWorks'
-import BookPickUp from './components/BookPickUp'
-import Faqs from './components/Faqs'
-import Footer from './components/Footer'
-import DoItYourself from './components/DoItYourself'
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
+import HomePage from "./pages/HomePage"
+import PrivacyPolicy from "./pages/PrivacyPolicy"
+
 function App() {
   return (
     <div className='font-lato text-gray-700'>
-    <LandingPage/>
-    <About/>
-    <OurServices/>
-    <HowItWorks/>
-    <BookPickUp/>
-    <DoItYourself/>
-    <Faqs/>
-    <Footer/>
+      <Router>
+        <Routes>
+          <Route path='/' element= {<HomePage/>}/>
+          <Route path='/privacy-policy' element= {<PrivacyPolicy/>}/>
+        </Routes>
+      </Router>
     </div>
   )
 }
-
 export default App
