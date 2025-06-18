@@ -10,8 +10,8 @@ function PrivacyPolicy() {
         </p>
         <p className="mb-8">
           LuxeWash ("we," "us," or "our") provides laundry and dry-cleaning services through a WhatsApp-based chatbot. This Privacy Policy describes how we collect, use, share, and protect your personal information when you use our services via WhatsApp or our website{' '}
-          <a href="https://dashboard.luxewash.com" className="text-blue-600 hover:underline">
-            dashboard.luxewash.com
+          <a href="https://dashboard.luxewashlaundry.ng" className="text-blue-600 hover:underline">
+            dashboard.luxewashlaundry.ng
           </a>.
         </p>
 
@@ -90,12 +90,12 @@ function PrivacyPolicy() {
             <ul className="list-disc pl-6">
               <li>
                 <strong>Email:</strong>{' '}
-                <a href="mailto:support@luxewash.com" className="text-blue-600 hover:underline">
-                  support@luxewash.com
+                <a href="mailto:luxewash@theluxewashlaundry.com" className="text-blue-600 hover:underline">
+                  luxewash@theluxewashlaundry.com
                 </a>
               </li>
               <li><strong>Phone:</strong> +2349161497203</li>
-              <li><strong>Address:</strong> LuxeWash, Lagos, Nigeria</li>
+              <li><strong>Address:</strong> We’re inside Muri Akinola Street, Victoria Island, Shops 33 & 58 44 Prime Shopping Mall Off Ajose Adeogun & Beside Mobil Filling Station Lekki-Epe Expressway, Victoria Island, Lagos</li>
             </ul>
           </div>
         </section>
