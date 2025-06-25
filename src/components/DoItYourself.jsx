@@ -38,6 +38,14 @@ const DoItYourself = () => {
         return () => clearTimeout(timer)
     },[currentImage])
 
+  const handleBookClick = () => {
+  if (typeof window !== "undefined" && window.gtag_report_conversion) {
+    window.gtag_report_conversion("https://luxewash.vercel.app/thank-you");
+  } else {
+    // fallback in case gtag is not available
+    window.location.href = "https://luxewash.vercel.app/thank-you";
+  }
+};
   return (
     <motion.div className='my-10' variants={diyVariant} initial="initial" whileInView="animate" viewport ={{once: true, amount: 0.2}}>
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>Want to do it yourself?</h2>
@@ -45,7 +53,7 @@ const DoItYourself = () => {
         <div className='absolute inset-0 bg-black opacity-30 rounded-xl'></div>
         <div className='absolute z-10 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 text-center w-full'>
             <p className='text-3xl p-3 md:text-3xl font-lato'>Enjoy our self-service machines in a chill environment. Come wash, relax, and meet cool people.</p>
-            <a href='https://wa.me/2349161497203' target='_blank' className="border border-white p-3 text-white rounded-md my-3 hover:bg-slate-700 hover:border-slate-700">Book a Self-wash Slot</a>
+            <a onClick={handleBookClick} href='https://wa.me/2349161497203' target='_blank' className="border border-white p-3 text-white rounded-md my-3 hover:bg-slate-700 hover:border-slate-700">Book a Self-wash Slot</a>
         </div>
         </div>
       

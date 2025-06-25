@@ -62,6 +62,14 @@ const Hero = () => {
       }
     }
 }
+    const handleBookClick = () => {
+  if (typeof window !== "undefined" && window.gtag_report_conversion) {
+    window.gtag_report_conversion("https://luxewash.vercel.app/thank-you");
+  } else {
+    // fallback in case gtag is not available
+    window.location.href = "https://luxewash.vercel.app/thank-you";
+  }
+};
 
   return (
     <>
@@ -78,7 +86,7 @@ const Hero = () => {
             <h1 className='text-5xl font-playfair text-center '>{letters.map((letter, index) => (
               <motion.span className='' variants={heroVariant} initial="initial" animate="animate" transition={{ delay: index * 0.05, duration: 0.5 }} key={index}>{letter}</motion.span>
             ))}</h1>
-            <motion.a href='https://wa.me/2349161497203' target='_blank' className='border border-gray-300 w-fit self-center p-3 rounded-md hover:bg-[#002147] hover:border-[#002147] hover:text-white' variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 1) * 0.05, duration: 0.5 }}>Schedule a Pick up</motion.a>
+            <motion.a onClick={handleBookClick} href='https://wa.me/2349161497203' target='_blank' className='border border-gray-300 w-fit self-center p-3 rounded-md hover:bg-[#002147] hover:border-[#002147] hover:text-white' variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 1) * 0.05, duration: 0.5 }}>Schedule a Pick up</motion.a>
       </motion.div>
         
       <motion.div variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 10) * 0.05, duration: 0.3 }} className="absolute bottom-5 left-0 right-0 hidden md:flex justify-between font-playfair font-thin text-base w-full lg:w-9/12 mx-auto px-3">
@@ -126,4 +134,4 @@ const Hero = () => {
   )
 }
 
-export default Hero
+export default Hero 

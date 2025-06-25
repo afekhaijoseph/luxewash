@@ -21,6 +21,27 @@ const OurServices = () => {
     }
   }
   }
+
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17207485720/O2gdCOa-2eAaEJjKlY1A',
+      'event_callback': callback
+  });
+  return false;
+}
+  const handleBookClick = () => {
+  if (typeof window !== "undefined" && window.gtag_report_conversion) {
+    window.gtag_report_conversion("https://luxewash.vercel.app/thank-you");
+  } else {
+    // fallback in case gtag is not available
+    window.location.href = "https://luxewash.vercel.app/thank-you";
+  }
+};
   return (
     <div id="services" className='bg-secondary text-white py-8'>   
     <motion.div variants={serviceVariant} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.2 }}>
@@ -69,7 +90,7 @@ const OurServices = () => {
          </div>
          </div>
          <div className='w-full flex items-center'>
-            <a href='https://wa.me/2349161497203' target='_blank' className='mx-auto border-2 p-2 rounded-md hover:bg-white hover:text-[#36454F] hover:border-[#36454F]'>Get a Quote</a>      
+            <a onClick={handleBookClick}  href='https://wa.me/2349161497203' target='_blank' className='mx-auto border-2 p-2 rounded-md hover:bg-white hover:text-[#36454F] hover:border-[#36454F]'>Get a Quote</a>      
          </div>
     </motion.div> 
     </div>

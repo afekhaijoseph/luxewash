@@ -31,6 +31,15 @@ const boxVariants = {
     }
   }
 }
+const handleBookClick = () => {
+  if (typeof window !== "undefined" && window.gtag_report_conversion) {
+    window.gtag_report_conversion("https://luxewash.vercel.app/thank-you");
+  } else {
+    // fallback in case gtag is not available
+    window.location.href = "https://luxewash.vercel.app/thank-you";
+  }
+};
+
  const HowItWorks = () => {
    return (
     //visual show four step process with either icons or image sliders
@@ -78,7 +87,7 @@ const boxVariants = {
           </motion.div>
         </div>
         <div className='mt-8 md:mt-0'>
-          <motion.a variants={boxVariants} href='https://wa.me/2349161497203' target='_blank' className="bg-green-500 text-white px-4 py-2 rounded inline-block">Chat on WhatsApp</motion.a>
+          <motion.a onClick={handleBookClick} variants={boxVariants} href='https://wa.me/2349161497203' target='_blank' className="bg-green-500 text-white px-4 py-2 rounded inline-block">Chat on WhatsApp</motion.a>
         </div>
         
      </motion.div>
