@@ -85,41 +85,50 @@ const Hero = () => {
       <motion.div className='absolute top-[20%] md:top-1/3 left-1/2 -translate-x-1/2 w-11/12 lg:w-8/12 mx-auto flex flex-col gap-10 text-gray-300'>
             <h1 className='text-5xl font-playfair text-center '>{letters.map((letter, index) => (
               <motion.span className='' variants={heroVariant} initial="initial" animate="animate" transition={{ delay: index * 0.05, duration: 0.5 }} key={index}>{letter}</motion.span>
-            ))}</h1>
+              
+            ))}
+            <span className="sr-only">Premium Laundry. Delivered to Your Doorstep.</span>
+            </h1>
             <motion.a onClick={handleBookClick} href='https://wa.me/2349161497203' target='_blank' className='border border-gray-300 w-fit self-center p-3 rounded-md hover:bg-[#002147] hover:border-[#002147] hover:text-white' variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 1) * 0.05, duration: 0.5 }}>Schedule a Pick up</motion.a>
       </motion.div>
-        
-      <motion.div variants={ariseVariant} initial="initial" animate="animate" transition={{ delay: (letters.length + 10) * 0.05, duration: 0.3 }} className="absolute bottom-5 left-0 right-0 hidden md:flex justify-between font-playfair font-thin text-base w-full lg:w-9/12 mx-auto px-3">
-          <div className='flex items-center gap-2'>
-            <div className='max-w-7'>
-                <img src={timing} alt="" />
-            </div>
-            <p>24 to 48hrs turnaround</p>
-          </div>
-            <div className='h-6 bg-gray-300 w-[2px]'></div>
-            <div className='flex items-center gap-2'>
-            <div className='max-w-7'>
-                <img src={delivery} alt="" />
-            </div>
-            <p>Doorstep service</p>
-          </div>
-            
-            <div className='h-6 bg-gray-300 w-[2px] hidden md:block'></div>
 
-            <div className='flex items-center gap-2'>
-            <div className='max-w-7'>
-                <img src={gentle} alt="" />
-            </div>
-            <p>Gentle on fabric, tough on stain</p>
-          </div>
-            <div className='h-6 bg-gray-300 w-[2px]'></div>
-            <div className='flex items-center gap-2'>
-            <div className='max-w-7'>
-                <img src={premium} alt="" />
-            </div>
-            <p>Premium Finishing</p>
-          </div>
-      </motion.div>
+      <motion.div
+  variants={ariseVariant}
+  initial="initial"
+  animate="animate"
+  transition={{ delay: (letters.length + 10) * 0.05, duration: 0.3 }}
+  className="absolute bottom-5 left-0 right-0 hidden md:flex justify-between font-playfair font-thin text-base w-full lg:w-9/12 mx-auto px-3"
+>
+  <ul className="flex justify-between w-full">
+    <li className="flex items-center gap-2">
+      <img src={timing} alt="Clock icon indicates fast delivery time" className="max-w-7" />
+      <p className="text-sm">24 to 48hrs turnaround</p>
+    </li>
+
+    <div className='h-6 bg-gray-300 w-[2px] hidden md:block' aria-hidden="true"></div>
+
+    <li className="flex items-center gap-2">
+      <img src={delivery} alt="Delivery icon for home laundry delivery" className="max-w-7" />
+      <p className="text-sm">Doorstep service</p>
+    </li>
+
+    <div className='h-6 bg-gray-300 w-[2px] hidden md:block' aria-hidden="true"></div>
+
+    <li className="flex items-center gap-2">
+      <img src={gentle} alt="Fabric care icon for laundry care" className="max-w-7" />
+      <p className="text-sm">Gentle on fabric, tough on stain</p>
+    </li>
+
+    <div className='h-6 bg-gray-300 w-[2px] hidden md:block' aria-hidden="true"></div>
+
+    <li className="flex items-center gap-2">
+      <img src={premium} alt="Premium icon for premium finishing" className="max-w-7" />
+      <p className="text-sm">Premium Finishing</p>
+    </li>
+  </ul>
+</motion.div>
+        
+      
       
       <div className='w-32 aspect-square mx-auto absolute hidden lg:block bottom-6 right-6'>
         <img className='w-full h-full rounded-lg' src={qrcode} alt="whatsapp qrcode" />

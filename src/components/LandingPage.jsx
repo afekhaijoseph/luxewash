@@ -8,7 +8,7 @@ const LandingPage = () => {
         <div className='absolute inset-0 bg-black opacity-50'></div>
         <div>
             <NavBar/>
-            <Hero/> x
+            <Hero/> 
         </div>
     </div>
 

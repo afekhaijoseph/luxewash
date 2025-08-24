@@ -44,13 +44,13 @@ function gtag_report_conversion(url) {
 };
   return (
     <div id="services" className='bg-secondary text-white py-8'>   
-    <motion.div variants={serviceVariant} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.2 }}>
+    <motion.section variants={serviceVariant} initial="initial" whileInView="animate" viewport={{ once: true, amount: 0.2 }}>
       <h2 className='my-4 text-center text-4xl font-bold font-playfair'>Services</h2>
          <div className='grid grid-cols-1 gap-6 w-11/12 mx-auto my-10 md:grid-cols-2 lg:grid-cols-4'>
              <div className='h-full'>
              <h3 className='text-lg font-semibold my-2'>Regular Wash & Fold</h3>
              <div className='w-full h-[150px]'>
-               <img className="w-full h-full object-cover rounded-2xl"src={folded} alt="" />
+               <img className="w-full h-full object-cover rounded-2xl"src={folded} alt="Neatly folded clothing from the laundry" />
              </div>
              <div>
                 <p>Everyday laundry, handled with care. Fresh, neatly folded clothes </p>
@@ -61,7 +61,7 @@ function gtag_report_conversion(url) {
              <div className='h-full'>
              <h3 className='text-lg font-semibold my-2'>Dry Cleaning (Suits, Native..)</h3>
              <div className='w-full h-[150px]'>
-                 <img className='w-full h-full object-cover rounded-2xl' src={dryclean} alt="" />
+                 <img className='w-full h-full object-cover rounded-2xl' src={dryclean} alt="Dry cleaned clothes on hangers" />
              </div>
              <div>
                 <p>Gentle on fabrics, powerful on stains. Perfect care for your finest outfits.</p>
@@ -71,7 +71,7 @@ function gtag_report_conversion(url) {
              <div className=''>
              <h3 className='text-lg font-semibold my-2'>Luxury Care (Silk, Wool, etc.)</h3>
              <div className='w-full h-[150px]'>
-                 <img className='w-full h-full object-cover rounded-2xl' src={luxury} alt="" />
+                 <img className='w-full h-full object-cover rounded-2xl' src={luxury} alt="Someone folding white luxury bedsheets" />
              </div>
              <div>
                 <p>Delicate garments deserve exceptional treatment. Expert handling for premium fabrics that require a softer touch.</p>
@@ -80,7 +80,7 @@ function gtag_report_conversion(url) {
              <div className=''>
                <h3 className='text-lg font-semibold my-2'>Corporate (Offices, Hotels)</h3>
              <div className='w-full h-[150px]'>
-                 <img className='w-full h-full object-cover rounded-2xl'src={hotel} alt="" />
+                 <img className='w-full h-full object-cover rounded-2xl'src={hotel} alt="A laundry cleaner washing clothes in a washing machine" />
              </div>
              <div>
                 <p>Reliable, high-volume laundry solutions tailored for businesses. Impeccable service that reflects your brand’s standard.</p>
@@ -92,7 +92,7 @@ function gtag_report_conversion(url) {
          <div className='w-full flex items-center'>
             <a onClick={handleBookClick}  href='https://wa.me/2349161497203' target='_blank' className='mx-auto border-2 p-2 rounded-md hover:bg-white hover:text-[#36454F] hover:border-[#36454F]'>Get a Quote</a>      
          </div>
-    </motion.div> 
+    </motion.section> 
     </div>
   )
 }
