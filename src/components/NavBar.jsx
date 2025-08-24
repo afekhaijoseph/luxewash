@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
 import {motion, AnimatePresence} from 'motion/react'
-import logo from '../assets/logo.svg'
+import logo from '/logo.svg'
 import { Link } from 'react-scroll'
 import { LiaNodeJs } from 'react-icons/lia'
 
