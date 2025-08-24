@@ -9,6 +9,7 @@ const Footer = () => {
               <img className='w-full' src={logo} alt="company logo"/>
             </div>
             <a href="/" className='p-0 m-0'>LuxeWash</a>
+            <br />
         </div>
       <div className="flex gap-3">
         <Link to="services" smooth={true} duration={500} offset={-50} href="#about" className="hover:text-primary">About Us</Link>
