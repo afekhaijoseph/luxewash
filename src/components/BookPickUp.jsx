@@ -23,8 +23,8 @@ const bipVariant = {
   }
   }
   return (
-    <div className="bg-gray-200 py-14">
-      <motion.section variants={bipVariant} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}}>
+    <section id="book-pickup" className="bg-gray-200 py-14">
+      <motion.div variants={bipVariant} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}}>
         <div className="text-center px-3">
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>Book a Pickup</h2>
         <p>We make it easy to schedule a pickup for your items</p>
@@ -42,8 +42,8 @@ const bipVariant = {
         </div>
         </div>
       </div>
-      </motion.section>
-    </div>
+      </motion.div>
+    </section>
   )
 }
 

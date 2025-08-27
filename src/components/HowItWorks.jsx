@@ -43,7 +43,7 @@ const handleBookClick = () => {
  const HowItWorks = () => {
    return (
     //visual show four step process with either icons or image sliders
-     <motion.section id="howitworks" className='my-10 flex flex-col items-center md:h-[50vh] lg:h-[70vh]' variants={hiwVariants} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}}>
+     <motion.section id="how-it-works" className='my-10 flex flex-col items-center md:h-[50vh] lg:h-[70vh]' variants={hiwVariants} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}}>
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>How it works</h2>
         <div className='my-auto grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 w-9/12'>
           <motion.div variants={boxVariants} className='relative rounded-lg shadow-lg border flex flex-col items-center py-6'>

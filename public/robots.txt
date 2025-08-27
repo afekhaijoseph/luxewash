@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://luxewashlaundry.ng/sitemap.xml

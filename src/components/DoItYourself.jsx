@@ -47,7 +47,7 @@ const DoItYourself = () => {
   }
 };
   return (
-    <motion.section className='my-10' variants={diyVariant} initial="initial" whileInView="animate" viewport ={{once: true, amount: 0.2}}>
+    <motion.section id="do-it-yourself" className='my-10' variants={diyVariant} initial="initial" whileInView="animate" viewport ={{once: true, amount: 0.2}}>
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>Self-Service Laundry at LuxeWash</h2>
         <div style={{ backgroundImage:`url(${bgImages[currentImage]})` }} className='relative text-white bg-cover bg-center h-[50vh] w-11/12 lg:w-10/12 mx-auto my-6 lg:h-[80vh] rounded-xl'>
         <div className='absolute inset-0 bg-black opacity-30 rounded-xl'></div>

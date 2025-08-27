@@ -81,7 +81,7 @@ const Faqs = () => {
     setOpenIndex((prev) => (prev === index ? null : index));
     }
   return (
-    <motion.div id="faqs" className="py-3 w-11/12 lg:w-2/4 mx-auto" variants={faqVariant} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}} onClick={handleClick}>
+    <motion.section id="faqs" className="py-3 w-11/12 lg:w-2/4 mx-auto" variants={faqVariant} initial="initial" whileInView="animate" viewport={{once: true, amount: 0.2}} onClick={handleClick}>
         <h2 className='my-4 text-center text-4xl font-semibold font-playfair'>Frequently Asked Questions</h2>
         <div className='my-6'>
         {faqData.map((item, index)=>{
@@ -99,7 +99,7 @@ const Faqs = () => {
           )
           })}
         </div>
-    </motion.div>
+    </motion.section>
   )
 }
 export default Faqs
